@@ -12,6 +12,9 @@ You open a file from your own disk. The app reads it in the browser with [h5wasm
 | **License** | [Apache-2.0](./LICENSE) |
 | **Live site** | [https://zy-neuro.github.io/NeuroInspector/](https://zy-neuro.github.io/NeuroInspector/) |
 | **Source** | [github.com/zy-neuro/NeuroInspector](https://github.com/zy-neuro/NeuroInspector) |
+| **DOI** | [10.5281/zenodo.21729447](https://doi.org/10.5281/zenodo.21729447) |
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21729447.svg)](https://doi.org/10.5281/zenodo.21729447)
 
 ---
 
@@ -413,32 +416,11 @@ License.
 
 ## Citation, Zenodo DOI & acknowledgements
 
-### Prefer citing this software?
+Please cite NeuroInspector using the DOI or [`CITATION.cff`](./CITATION.cff) (GitHub → **Cite this repository**):
 
-Use the repository’s [`CITATION.cff`](./CITATION.cff). On GitHub, open the repo → **Cite this repository** (generated from that file).
+**DOI:** [10.5281/zenodo.21729447](https://doi.org/10.5281/zenodo.21729447)
 
-Until a Zenodo DOI exists, you can cite the GitHub repository / version tag. After you mint a DOI (below), add it to `CITATION.cff` under `identifiers:` and update this section.
-
-### Zenodo DOI — do you need a GitHub Release?
-
-**Yes — the usual path is: enable Zenodo ↔ GitHub, then create a GitHub Release.** Zenodo archives that release snapshot and mints a DOI.
-
-Typical steps:
-
-1. Log in at [https://zenodo.org](https://zenodo.org) (often via GitHub / ORCID).
-2. Zenodo → **GitHub** (under account / integrations) → turn **On** for `zy-neuro/NeuroInspector`.
-3. On GitHub: **Releases → Create a new release**  
-   - Tag e.g. `v0.1.0` (matches `package.json` version)  
-   - Title / notes describing the release  
-   - Publish release  
-4. Zenodo picks up the release (a minute or two), creates a record, and shows a **DOI**.  
-5. Copy the DOI into `CITATION.cff` and this README (optional follow-up commit).
-
-Notes:
-
-- You do **not** need Zenodo for the app or GitHub Pages to work — only for a citable DOI.
-- Each new GitHub Release can get a **version DOI**; Zenodo also provides a **concept DOI** that always points at the latest.
-- The repo must stay accessible to Zenodo (public is simplest).
+New GitHub Releases are archived automatically by Zenodo (each version gets its own DOI; the badge above is the concept DOI for the project).
 
 ### Acknowledgements
 

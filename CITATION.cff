@@ -14,13 +14,12 @@ url: "https://zy-neuro.github.io/NeuroInspector/"
 license: Apache-2.0
 version: 0.1.0
 date-released: "2026-07-31"
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.21729447
 keywords:
   - HDF5
   - NWB
   - neuroscience
   - visualization
   - inspection
-# After minting a Zenodo DOI for a GitHub Release, uncomment and fill in:
-# identifiers:
-#   - type: doi
-#     value: 10.5281/zenodo.xxxxxxxx
