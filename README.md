@@ -10,7 +10,8 @@ You open a file from your own disk. The app reads it in the browser with [h5wasm
 | **Formats** | `.h5`, `.hdf5`, `.nwb` |
 | **Runtime** | Modern desktop browser (Chrome / Edge / Firefox / Safari) |
 | **License** | [Apache-2.0](./LICENSE) |
-| **Live site** | After publish: `https://<user>.github.io/NeuroInspector/` |
+| **Live site** | [https://zy-neuro.github.io/NeuroInspector/](https://zy-neuro.github.io/NeuroInspector/) |
+| **Source** | [github.com/zy-neuro/NeuroInspector](https://github.com/zy-neuro/NeuroInspector) |
 
 ---
 
@@ -36,7 +37,7 @@ You open a file from your own disk. The app reads it in the browser with [h5wasm
 18. [Roadmap](#roadmap)
 19. [Contributing](#contributing)
 20. [License](#license)
-21. [Citation & acknowledgements](#citation--acknowledgements)
+21. [Citation, Zenodo DOI & acknowledgements](#citation-zenodo-doi--acknowledgements)
 
 ---
 
@@ -350,10 +351,12 @@ Place PNGs in `docs/screenshots/` (see filenames below). They are included in th
 
 Automated deploy is configured in `.github/workflows/pages.yml`.
 
-1. Create a GitHub repository named **`NeuroInspector`** (name must match the Vite `base` path).
-2. Push `main`.
-3. **Settings → Pages → Build and deployment → Source:** GitHub Actions.
-4. Open `https://<github-username>.github.io/NeuroInspector/` after the workflow succeeds.
+The live site is already deployed:
+
+**https://zy-neuro.github.io/NeuroInspector/**
+
+Source: [github.com/zy-neuro/NeuroInspector](https://github.com/zy-neuro/NeuroInspector).  
+Pages is built from `.github/workflows/pages.yml` on pushes to `main` (Source = GitHub Actions).
 
 No custom domain is required. You can add one later in Pages settings if you want.
 
@@ -408,9 +411,38 @@ License.
 
 ---
 
-## Citation & acknowledgements
+## Citation, Zenodo DOI & acknowledgements
 
-If NeuroInspector is useful in your work, a short acknowledgement is appreciated. There is no formal paper citation for v0.1 yet.
+### Prefer citing this software?
+
+Use the repository’s [`CITATION.cff`](./CITATION.cff). On GitHub, open the repo → **Cite this repository** (generated from that file).
+
+Until a Zenodo DOI exists, you can cite the GitHub repository / version tag. After you mint a DOI (below), add it to `CITATION.cff` under `identifiers:` and update this section.
+
+### Zenodo DOI — do you need a GitHub Release?
+
+**Yes — the usual path is: enable Zenodo ↔ GitHub, then create a GitHub Release.** Zenodo archives that release snapshot and mints a DOI.
+
+Typical steps:
+
+1. Log in at [https://zenodo.org](https://zenodo.org) (often via GitHub / ORCID).
+2. Zenodo → **GitHub** (under account / integrations) → turn **On** for `zy-neuro/NeuroInspector`.
+3. On GitHub: **Releases → Create a new release**  
+   - Tag e.g. `v0.1.0` (matches `package.json` version)  
+   - Title / notes describing the release  
+   - Publish release  
+4. Zenodo picks up the release (a minute or two), creates a record, and shows a **DOI**.  
+5. Copy the DOI into `CITATION.cff` and this README (optional follow-up commit).
+
+Notes:
+
+- You do **not** need Zenodo for the app or GitHub Pages to work — only for a citable DOI.
+- Each new GitHub Release can get a **version DOI**; Zenodo also provides a **concept DOI** that always points at the latest.
+- The repo must stay accessible to Zenodo (public is simplest).
+
+### Acknowledgements
+
+If NeuroInspector is useful in your work, a short acknowledgement is appreciated.
 
 This project is **not** affiliated with the [Neurodata Without Borders](https://www.nwb.org/) project, the Allen Institute, or HDF Group. It only reads files that use those formats.
 

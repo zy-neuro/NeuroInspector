@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use NeuroInspector, please cite it using these metadata."
+type: software
+title: NeuroInspector
+abstract: >-
+  Local-in-browser visual inspection tool for HDF5 and NWB neuroscience files.
+  Reads files on the user's machine; does not upload data to a server.
+authors:
+  - family-names: Yang
+    given-names: Zihan
+    email: zy.zihanyang@gmail.com
+repository-code: "https://github.com/zy-neuro/NeuroInspector"
+url: "https://zy-neuro.github.io/NeuroInspector/"
+license: Apache-2.0
+version: 0.1.0
+date-released: "2026-07-31"
+keywords:
+  - HDF5
+  - NWB
+  - neuroscience
+  - visualization
+  - inspection
+# After minting a Zenodo DOI for a GitHub Release, uncomment and fill in:
+# identifiers:
+#   - type: doi
+#     value: 10.5281/zenodo.xxxxxxxx
