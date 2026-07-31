@@ -1,0 +1,22 @@
+node_modules
+dist
+dist-ssr
+*.local
+.DS_Store
+*.log
+.env
+.env.*
+
+# Editor / agent (local only)
+.cursor/
+
+# Local sample / data files (keep out of git)
+*.h5
+*.hdf5
+*.nwb
+!node_modules/**/*.h5
+
+# Build / tooling
+.vite
+coverage
+*.tsbuildinfo
