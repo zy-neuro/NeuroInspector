@@ -9,6 +9,7 @@ dist-ssr
 
 # Editor / agent (local only)
 .cursor/
+neuro-editor/
 
 # Local sample / data files (keep out of git)
 *.h5

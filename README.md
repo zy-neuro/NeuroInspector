@@ -4,6 +4,8 @@
 
 You open a file from your own disk. The app reads it in the browser with [h5wasm](https://github.com/usnistgov/h5wasm), shows the hierarchy, attributes, and **sampled** previews of arrays. **Nothing is uploaded** to a remote server—the optional GitHub Pages site only hosts the static web app.
 
+[![CI](https://github.com/zy-neuro/NeuroInspector/actions/workflows/ci.yml/badge.svg)](https://github.com/zy-neuro/NeuroInspector/actions/workflows/ci.yml)
+
 | | |
 |---|---|
 | **Status** | v0.1 — inspection + project annotation packs |
@@ -35,12 +37,13 @@ You open a file from your own disk. The app reads it in the browser with [h5wasm
 13. [Technology](#technology)
 14. [Repository layout](#repository-layout)
 15. [Development scripts](#development-scripts)
-16. [GitHub Pages](#github-pages)
-17. [Troubleshooting](#troubleshooting)
-18. [Roadmap](#roadmap)
-19. [Contributing](#contributing)
-20. [License](#license)
-21. [Citation, Zenodo DOI & acknowledgements](#citation-zenodo-doi--acknowledgements)
+16. [Testing & validation](#testing--validation)
+17. [GitHub Pages](#github-pages)
+18. [Troubleshooting](#troubleshooting)
+19. [Roadmap](#roadmap)
+20. [Contributing](#contributing)
+21. [License](#license)
+22. [Citation, Zenodo DOI & acknowledgements](#citation-zenodo-doi--acknowledgements)
 
 ---
 
@@ -296,8 +299,12 @@ These exports describe structure/metadata available to the inspector; they are n
 
 ```
 neurodata-inspector/
+├── .github/workflows/ci.yml      # Test + build
 ├── .github/workflows/pages.yml   # GitHub Pages deploy
+├── docs/softwarex/               # Validation notes for the paper
+├── examples/                     # Example .neuroinspector.json pack
 ├── samples/                      # Local binaries only (gitignored *.h5/*.nwb)
+├── scripts/                      # Pack reader + optional open/walk bench
 ├── src/
 │   ├── components/
 │   │   ├── common/               # Landing, icons, menus, hover tips
@@ -327,8 +334,25 @@ neurodata-inspector/
 | `npm run dev` | Dev server (default port **5173**) |
 | `npm run build` | `tsc -b` + production build → `dist/` |
 | `npm run preview` | Preview the production build locally |
+| `npm test` | Unit tests (Vitest) |
+| `python3 scripts/read_project_pack.py <file>` | Read a `.neuroinspector.json` pack |
+| `node scripts/bench_open.mjs` | Optional local open/walk timings (needs `samples/`) |
 
 Pages production builds set `GITHUB_PAGES=true` so Vite `base` is `/NeuroInspector/`. Local dev uses `/`.
+
+---
+
+## Testing & validation
+
+Automated tests cover project-pack round-trips, SHA-256 fingerprint match/mismatch, schema rejection for malformed packs, and formatting helpers:
+
+```bash
+npm test
+```
+
+CI runs `npm test` and `npm run build` on pushes and pull requests to `main` (see `.github/workflows/ci.yml`).
+
+For SoftwareX reproducibility assets (example pack, performance notes, manuscript draft wording), see [`docs/softwarex/VALIDATION.md`](./docs/softwarex/VALIDATION.md) and [`examples/`](./examples/).
 
 ---
 

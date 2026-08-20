@@ -1,0 +1,31 @@
+{
+  "format": "neuroinspector-project/v1",
+  "exportedAt": "2026-08-20T00:00:00.000Z",
+  "title": "Example project pack (SoftwareX reproducibility)",
+  "description": "Illustrative pack for the NeuroInspector release. Replace sourceFile with values from your local NWB after hashing, or regenerate with the UI Export project JSON action.",
+  "sourceFile": {
+    "name": "sub-758112406_ses-760315976_icephys.nwb",
+    "sizeBytes": 73296120,
+    "sha256": "ea7ce202d29c87d0b59443c24b7f899f4a2b650caa32a8dfde59efa287c6ec32"
+  },
+  "selectedPaths": [
+    "/acquisition",
+    "/general",
+    "/general/subject",
+    "/processing"
+  ],
+  "annotations": [
+    {
+      "path": "/acquisition",
+      "note": "Primary acquisition container for this intracellular session.",
+      "tags": ["example"],
+      "updatedAt": "2026-08-20T00:00:00.000Z"
+    },
+    {
+      "path": "/general/subject",
+      "note": "Subject metadata used when reconnecting the pack to the source file.",
+      "tags": ["metadata"],
+      "updatedAt": "2026-08-20T00:00:00.000Z"
+    }
+  ]
+}
