@@ -8,15 +8,15 @@ You open a file from your own disk. The app reads it in the browser with [h5wasm
 
 | | |
 |---|---|
-| **Status** | v0.1 — inspection + project annotation packs |
+| **Status** | v0.1.1 — inspection + project annotation packs |
 | **Formats** | `.h5`, `.hdf5`, `.nwb` |
 | **Runtime** | Modern desktop browser (Chrome / Edge / Firefox / Safari) |
 | **License** | [Apache-2.0](./LICENSE) |
 | **Live site** | [https://zy-neuro.github.io/NeuroInspector/](https://zy-neuro.github.io/NeuroInspector/) |
 | **Source** | [github.com/zy-neuro/NeuroInspector](https://github.com/zy-neuro/NeuroInspector) |
-| **DOI** | [10.5281/zenodo.21729447](https://doi.org/10.5281/zenodo.21729447) |
+| **DOI** | [10.5281/zenodo.22033537](https://doi.org/10.5281/zenodo.22033537) |
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21729447.svg)](https://doi.org/10.5281/zenodo.21729447)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22033537.svg)](https://doi.org/10.5281/zenodo.22033537)
 
 ---
 
@@ -442,9 +442,9 @@ License.
 
 Please cite NeuroInspector using the DOI or [`CITATION.cff`](./CITATION.cff) (GitHub → **Cite this repository**):
 
-**DOI:** [10.5281/zenodo.21729447](https://doi.org/10.5281/zenodo.21729447)
+**DOI (v0.1.1):** [10.5281/zenodo.22033537](https://doi.org/10.5281/zenodo.22033537)
 
-New GitHub Releases are archived automatically by Zenodo (each version gets its own DOI; the badge above is the concept DOI for the project).
+New GitHub Releases are archived automatically by Zenodo (each version gets its own DOI). The badge and link above point to the current archived version; the concept DOI for all versions is [10.5281/zenodo.21729446](https://doi.org/10.5281/zenodo.21729446).
 
 ### Acknowledgements
 
